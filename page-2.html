@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Chorasmian&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-image: url("images/hi.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #faa7e0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        overflow: hidden;
+        color: white;
+      }
+      .btn {
+        border: 2px solid white;
+        border-radius: 20px;
+        color: rgb(255, 255, 255);
+        font-size: 15px;
+        font-family: "Roboto", sans-serif;
+        padding: 10px;
+        width: 5rem;
+        background-color: rgba(74, 28, 69, 0.3);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        transition: transform 0.3s ease;
+      }
+      .btn:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+      /* Container for the whole row */
+      .container {
+        display: flex;
+        align-items: center;
+        gap: 20px; /* space between images and column */
+      }
+
+      .main-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .side-img {
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 20px; /* optional */
+        border-radius: 20px;
+        border: 5px solid white;
+      }
+
+      .side-img.left {
+        margin-right: 20px;
+      }
+
+      .side-img.right {
+        margin-left: 20px;
+      }
+
+      .cell {
+        border: 1px solid white;
+        border-radius: 20px;
+        padding: 15px;
+        background-color: rgba(74, 28, 69, 0.3);
+        margin: 10px;
+        width: 30rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        display: flex;
+      }
+      .cell:hover {
+        background-color: rgba(74, 28, 69, 0.5);
+        cursor: pointer;
+      }
+
+      h1,
+      span {
+        text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+
+      .title,
+      #bladee-message,
+      #success-message {
+        color: white;
+        text-shadow:
+          0 2px 4px rgba(0, 0, 0, 0.4),
+          0 4px 8px rgba(0, 0, 0, 0.4),
+          0 8px 16px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/sausage.jpg" class="side-img left" alt="Left Image" />
+      <audio id="goofyAudio" loop class="goofy-audio" autoplay>
+        <source
+          src="music/bladee - Valerie (visual representation) (1) (mp3cut.net).mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+
+      <div class="main-column">
+        <h1 class="title">When was the first time we saw each other irl?</h1>
+
+        <div class="cell">
+          <span>25th January 2026</span>
+        </div>
+        <div class="cell">
+          <span>24th January 2026</span>
+        </div>
+        <div class="cell">
+          <span>31st January 2026</span>
+        </div>
+        <div class="cell">
+          <span>26th January 2026</span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: center">
+          <span id="error-message" style="visibility: hidden"></span>
+          <span id="success-message" style="visibility: hidden"></span>
+          <span id="bladee-message" style="visibility: hidden"></span>
+          <button class="btn" style="visibility: hidden; margin-top: 5px">
+            Next
+          </button>
+        </div>
+      </div>
+
+      <img src="images/mirror.jpg" class="side-img right" alt="Right Image" />
+    </div>
+
+    <script src="page-2.js"></script>
+  </body>
+</html>
